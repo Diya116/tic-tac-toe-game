@@ -1,0 +1,145 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+}
+body{
+    background-color:black;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:550px;
+    margin:0 auto;
+    background-color:black;
+}
+h1{
+    color:#9896f1;
+  /* text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(219, 226, 224),
+      0 0 82px rgb(208, 220, 216),
+      0 0 92px rgb(210, 222, 218),
+      0 0 102px rgb(189, 204, 199),
+      0 0 151px rgb(211, 224, 220); */
+    text-align: center;
+    /* margin-bottom: 70px; */
+    font-size: 3rem;
+    font-weight: 500;
+    margin:20px;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    
+    /* background-color:black; */
+    height:300px;
+    width:300px;
+    margin-bottom: 50px;
+    border:none;
+    /* box-shadow: 0 0 .2rem #fff,
+    /* 0 0 .2rem #fff, */
+    /* 0 0 2rem #9f9ca0, */
+    /* 0 0 0.8rem #ddd8df, */
+    /* 0 0 2.8rem #e2dae5,
+    inset 0 0 1.3rem #e2dce4; */ */
+
+}
+
+
+.tools{
+    display: flex;
+    justify-content:space-between;
+  margin-bottom:15px;
+}
+
+/* .game{
+    display: flex;
+    flex-direction: column;
+    width:500px;
+    height:500px;
+    background-color: aquamarine;
+} */
+.header{
+    display:flex;
+    color: #e2dce4;
+    font-size:24px;
+}
+.board{
+   
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap:0px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.board-tile{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size:80px;
+     color: #ddd8df;
+}
+.board-tile:not(:nth-child(3n)) 
+{
+    border-right: 3px solid white;
+    /* box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #9f9ca0,
+    0 0 0.8rem #ddd8df,
+    0 0 2.8rem #e2dae5,
+    inset 0 0 1.3rem #e2dce4;  */
+    
+}
+.board-tile:not(:nth-last-child(-n+3)) 
+{
+    border-bottom: 3px solid white;
+    /* box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #9f9ca0,
+    0 0 0.8rem #ddd8df,
+    0 0 2.8rem #e2dae5,
+    inset 0 0 1.3rem #e2dce4; */
+    
+}
+.board-tile:hover{
+    background-color:plum;
+    opacity:0.7;
+    cursor: pointer;
+    color: black;
+   
+}
+.header .player-o{
+    flex:1;
+    border-bottom: 5px solid black;
+    padding-bottom: 8px;
+
+}
+.header .player-x{
+    flex:1;
+    border-bottom: 5px solid #8ef6e4;
+    padding-bottom: 8px;
+    color:#8ef6e4;
+}
+.icons{
+    display: flex;
+   justify-content: space-between;
+   margin:40px;  
+   justify-content: space-around;
+}
+
+.replay{
+    margin-right: 50px;
+}
+.win{
+    display:none;
+}
